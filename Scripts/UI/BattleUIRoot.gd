@@ -16,8 +16,17 @@ extends CanvasLayer
 #### Fight Indicator #########
 @onready var stance_indicator = $MarginContainer/FightIndicatorContainer/StanceIndicator
 @onready var strike_indicator = $MarginContainer/FightIndicatorContainer/StrikeIndicator
+@onready var block_indicator = $MarginContainer/FightIndicatorContainer/BlockIndicator
 @onready var stance_label = $MarginContainer/FightIndicatorContainer/MarginContainer/StanceLabel
-@onready var strike_label = $MarginContainer/FightIndicatorContainer/MarginContainer/StrikeLabel
+@onready var block_label = $MarginContainer/FightIndicatorContainer/MarginContainer/BlockLabel
+
+##### BAD BAD BAD ############
+###############################
+######## MAKE SFX BUS #############
+##################################
+@onready var action_button_sfx = $ActionButtonSFX
+@onready var accept_sfx = $AcceptSFX
+
 
 
 var ability_bar: PanelContainer
@@ -46,6 +55,8 @@ func update_hp_bars():
 func update_fight_indicator():
 	stance_indicator.update_stance_display()
 	stance_label.text ="Stance: " + BattleData.stance
+	block_indicator.update_block_display()
+	block_label.text = "Block: " + BattleData.face
 	strike_indicator.clear()
 
 func update_strike_indicator():
@@ -67,16 +78,17 @@ func _process(delta):
 
 func _on_strike_pressed():
 	display_abilities("Strike")
+	action_button_sfx.play()
 
 
 func _on_block_pressed():
 	display_abilities("Block")
-
-
+	action_button_sfx.play()
 
 
 func _on_dodge_pressed():
 	display_abilities("Dodge")
+	action_button_sfx.play()
 
 
 func _on_cancel_button_pressed():
@@ -84,8 +96,10 @@ func _on_cancel_button_pressed():
 	ability_bar.queue_free()
 	BattleData.selected_ability = null
 	$MarginContainer/UIVContainer/ButtonContainer/CancelButton/SFX.play()
+	update_fight_indicator()
 
 func _on_accept_button_pressed():
+	accept_sfx.play()
 	cancel_button.disabled = true
 	accept_button.disabled = true
 	ability_bar.queue_free()

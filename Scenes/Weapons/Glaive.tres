@@ -1,11 +1,15 @@
-[gd_resource type="Resource" script_class="Weapon" load_steps=12 format=3 uid="uid://co0sblbjkwpxa"]
+[gd_resource type="Resource" script_class="Weapon" load_steps=16 format=3 uid="uid://co0sblbjkwpxa"]
 
+[ext_resource type="Resource" uid="uid://ch3j1vgkmgp3v" path="res://Scenes/Abilities/Blocks/TopBlock.tres" id="1_0qi2q"]
 [ext_resource type="Script" path="res://Scenes/CustomResources/Weapon.gd" id="1_3um0i"]
 [ext_resource type="Resource" uid="uid://f5rdajx2glat" path="res://Scenes/Abilities/Strikes/Weapons/Glaive/RisingBoar.tres" id="1_ddlb0"]
 [ext_resource type="Resource" uid="uid://ihj50sjhmltf" path="res://Scenes/Abilities/Strikes/Weapons/Glaive/Gore.tres" id="1_qk3mf"]
+[ext_resource type="Resource" uid="uid://thcq888yygml" path="res://Scenes/Abilities/Blocks/RightBlock.tres" id="2_2qfif"]
 [ext_resource type="Resource" uid="uid://diunypqo0h4oe" path="res://Scenes/Abilities/Strikes/Weapons/Glaive/Trip.tres" id="3_8brmo"]
 [ext_resource type="Resource" uid="uid://cwscr5rdwscq5" path="res://Scenes/Abilities/Strikes/Weapons/Glaive/Sweep.tres" id="3_mwg12"]
 [ext_resource type="Resource" uid="uid://weoqvgadv65m" path="res://Scenes/Abilities/Strikes/Weapons/Glaive/Charge.tres" id="3_q3jq3"]
+[ext_resource type="Resource" uid="uid://dypvsu4g0ligg" path="res://Scenes/Abilities/Blocks/BottomBlock.tres" id="3_tablp"]
+[ext_resource type="Resource" uid="uid://jv3igpl2bj81" path="res://Scenes/Abilities/Blocks/LeftBlock.tres" id="4_6t05t"]
 [ext_resource type="Resource" uid="uid://c8bynch4eebl5" path="res://Scenes/Abilities/Strikes/Weapons/Glaive/Galop.tres" id="4_c0dbl"]
 [ext_resource type="Resource" uid="uid://ciqei1cvj4ka4" path="res://Scenes/Abilities/Strikes/Weapons/Glaive/ShoulderPin.tres" id="5_456ni"]
 [ext_resource type="Resource" uid="uid://dyubp8rb34qhs" path="res://Scenes/Abilities/Strikes/Weapons/Glaive/Impale.tres" id="5_xgr5j"]
@@ -22,5 +26,5 @@ top_right_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([E
 bottom_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("3_mwg12"), ExtResource("5_xgr5j")])
 bottom_left_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("1_ddlb0")])
 bottom_right_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("1_qk3mf"), ExtResource("3_8brmo")])
-blocks = Array[Resource("res://Scenes/CustomResources/Block.gd")]([])
+blocks = Array[Resource("res://Scenes/CustomResources/Block.gd")]([ExtResource("1_0qi2q"), ExtResource("2_2qfif"), ExtResource("3_tablp"), ExtResource("4_6t05t")])
 dodges = Array[Resource("res://Scenes/CustomResources/Dodge.gd")]([])

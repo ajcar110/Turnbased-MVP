@@ -1,4 +1,4 @@
-[gd_scene load_steps=44 format=3 uid="uid://dx36bm0e5eels"]
+[gd_scene load_steps=49 format=3 uid="uid://dx36bm0e5eels"]
 
 [ext_resource type="Script" path="res://Scripts/UI/BattleUIRoot.gd" id="1_enw1p"]
 [ext_resource type="PackedScene" uid="uid://dlgi7hp4dhjxn" path="res://Scenes/UI/AbilityBar.tscn" id="2_e20ti"]
@@ -32,6 +32,14 @@
 [ext_resource type="Texture2D" uid="uid://cx1xywb6gkw6p" path="res://Assests/Battle/UI/FightIndicator/Strike/FightIndicatorStrike6.png" id="29_kt02e"]
 [ext_resource type="Texture2D" uid="uid://cfek5p76cwni" path="res://Assests/Battle/UI/FightIndicator/FightIndicatorBlankFrame.png" id="30_yyoxl"]
 [ext_resource type="Script" path="res://Scenes/StrikeIndicator.gd" id="31_temip"]
+[ext_resource type="Texture2D" uid="uid://0lbiqaqjlohi" path="res://Assests/Battle/UI/FightIndicator/Block/FightIndicatorBlock2.png" id="33_mhsip"]
+[ext_resource type="Texture2D" uid="uid://bj41nkc2vw3ha" path="res://Assests/Battle/UI/FightIndicator/Block/FightIndicatorBlock3.png" id="34_acflp"]
+[ext_resource type="Texture2D" uid="uid://d2ft4ain0b1c7" path="res://Assests/Battle/UI/FightIndicator/Block/FightIndicatorBlock4.png" id="35_qh7ao"]
+[ext_resource type="Texture2D" uid="uid://bnv0834mkr4tb" path="res://Assests/Battle/UI/FightIndicator/Block/FightIndicatorBlock5.png" id="36_7os22"]
+[ext_resource type="Texture2D" uid="uid://b6s7xvsmn816x" path="res://Assests/Battle/UI/FightIndicator/Block/FightIndicatorBlock1.png" id="37_076uy"]
+[ext_resource type="Script" path="res://Scenes/UI/BlockIndicator.gd" id="38_pxhcf"]
+[ext_resource type="AudioStream" uid="uid://3mkdcd7bcr5r" path="res://Assests/SFX/MenuButtonSound.wav" id="39_uogtt"]
+[ext_resource type="AudioStream" uid="uid://b4cil13gjyayl" path="res://Assests/SFX/MenuAccept.wav" id="40_kll75"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sgvw"]
 bg_color = Color(0.945313, 0, 0.285156, 1)
@@ -44,15 +52,6 @@ texture = ExtResource("7_xylj5")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4f6e6"]
 texture = ExtResource("12_rmx35")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnbuv"]
-texture = ExtResource("13_wutyn")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdtc1"]
-texture = ExtResource("14_bka4c")
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ou8n"]
-texture = ExtResource("15_0kdyb")
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7u6l"]
 texture = ExtResource("16_iqny1")
@@ -91,9 +90,15 @@ frame_6/duration = 1.0
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_xs3dv"]
 frames = 5
+pause = true
+frame_0/texture = ExtResource("33_mhsip")
+frame_1/texture = ExtResource("34_acflp")
 frame_1/duration = 1.0
+frame_2/texture = ExtResource("35_qh7ao")
 frame_2/duration = 1.0
+frame_3/texture = ExtResource("36_7os22")
 frame_3/duration = 1.0
+frame_4/texture = ExtResource("37_076uy")
 frame_4/duration = 1.0
 
 [node name="BattleUIRoot" type="CanvasLayer"]
@@ -235,46 +240,87 @@ theme_override_constants/h_separation = 5
 theme_override_constants/v_separation = 5
 columns = 2
 
-[node name="Strike" type="Button" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
+[node name="Strike" type="TextureButton" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
 custom_minimum_size = Vector2(40, 22)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxTexture_nnbuv")
-theme_override_styles/hover = SubResource("StyleBoxTexture_sdtc1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_4ou8n")
-text = "Strike"
+texture_normal = ExtResource("13_wutyn")
+texture_pressed = ExtResource("15_0kdyb")
+texture_hover = ExtResource("14_bka4c")
+texture_focused = ExtResource("14_bka4c")
 
-[node name="Block" type="Button" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
-custom_minimum_size = Vector2(40, 22)
-layout_mode = 2
+[node name="Label" type="Label" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid/Strike"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxTexture_nnbuv")
-theme_override_styles/hover = SubResource("StyleBoxTexture_sdtc1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_4ou8n")
-text = "Block"
+text = "STRIKE"
+horizontal_alignment = 1
+vertical_alignment = 1
 
-[node name="Dodge" type="Button" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
+[node name="Block" type="TextureButton" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
 custom_minimum_size = Vector2(40, 22)
 layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxTexture_nnbuv")
-theme_override_styles/hover = SubResource("StyleBoxTexture_sdtc1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_4ou8n")
-text = "Dodge"
+texture_normal = ExtResource("13_wutyn")
+texture_pressed = ExtResource("15_0kdyb")
+texture_hover = ExtResource("14_bka4c")
+texture_focused = ExtResource("14_bka4c")
 
-[node name="Bag" type="Button" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
-custom_minimum_size = Vector2(40, 22)
-layout_mode = 2
+[node name="Label" type="Label" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid/Block"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 10
-theme_override_styles/normal = SubResource("StyleBoxTexture_nnbuv")
-theme_override_styles/hover = SubResource("StyleBoxTexture_sdtc1")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_4ou8n")
-text = "Bag
+text = "BLOCK"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Dodge" type="TextureButton" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
+custom_minimum_size = Vector2(40, 22)
+layout_mode = 2
+texture_normal = ExtResource("13_wutyn")
+texture_pressed = ExtResource("15_0kdyb")
+texture_hover = ExtResource("14_bka4c")
+texture_focused = ExtResource("14_bka4c")
+
+[node name="Label" type="Label" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid/Dodge"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "DODGE
 "
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Bag" type="TextureButton" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
+custom_minimum_size = Vector2(40, 22)
+layout_mode = 2
+texture_normal = ExtResource("13_wutyn")
+texture_pressed = ExtResource("15_0kdyb")
+texture_hover = ExtResource("14_bka4c")
+texture_focused = ExtResource("14_bka4c")
+
+[node name="Label" type="Label" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid/Bag"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+text = "BAG"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="FightIndicatorContainer" type="PanelContainer" parent="MarginContainer"]
 custom_minimum_size = Vector2(80, 63)
@@ -294,9 +340,9 @@ texture = SubResource("AnimatedTexture_vdws7")
 script = ExtResource("31_temip")
 
 [node name="BlockIndicator" type="TextureRect" parent="MarginContainer/FightIndicatorContainer"]
-visible = false
 layout_mode = 2
 texture = SubResource("AnimatedTexture_xs3dv")
+script = ExtResource("38_pxhcf")
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/FightIndicatorContainer"]
 layout_mode = 2
@@ -311,13 +357,19 @@ size_flags_vertical = 0
 theme_override_font_sizes/font_size = 6
 text = "Stance:"
 
-[node name="StrikeLabel" type="Label" parent="MarginContainer/FightIndicatorContainer/MarginContainer"]
+[node name="BlockLabel" type="Label" parent="MarginContainer/FightIndicatorContainer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 8
 theme_override_font_sizes/font_size = 6
-text = "Strike:"
+text = "Block:"
 vertical_alignment = 2
+
+[node name="ActionButtonSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("39_uogtt")
+
+[node name="AcceptSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("40_kll75")
 
 [connection signal="pressed" from="MarginContainer/UIVContainer/ButtonContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
 [connection signal="pressed" from="MarginContainer/UIVContainer/ButtonContainer/AcceptButton" to="." method="_on_accept_button_pressed"]

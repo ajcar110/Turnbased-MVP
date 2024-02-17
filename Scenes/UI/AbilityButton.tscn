@@ -9,7 +9,6 @@
 [node name="AbilityButton" type="TextureButton"]
 offset_right = 40.0
 offset_bottom = 22.0
-toggle_mode = true
 texture_normal = ExtResource("1_jc8sy")
 texture_pressed = ExtResource("2_j5wfr")
 texture_hover = ExtResource("3_70v72")
@@ -20,13 +19,13 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 23.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 10
-text = "??"
+theme_override_font_sizes/font_size = 5
+text = "Rising Boar"
 horizontal_alignment = 1
 vertical_alignment = 1
+uppercase = true
 
 [node name="SelectSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_vmkcg")
-volume_db = -10.0
 
 [connection signal="pressed" from="." to="." method="_on_pressed"]
