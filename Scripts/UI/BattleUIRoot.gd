@@ -45,6 +45,7 @@ func update_hp_bars():
 
 func update_fight_indicator():
 	stance_indicator.update_stance_display()
+	stance_label.text ="Stance: " + BattleData.stance
 	strike_indicator.clear()
 
 func update_strike_indicator():
@@ -82,7 +83,7 @@ func _on_cancel_button_pressed():
 	cancel_button.disabled = true
 	ability_bar.queue_free()
 	BattleData.selected_ability = null
-
+	$MarginContainer/UIVContainer/ButtonContainer/CancelButton/SFX.play()
 
 func _on_accept_button_pressed():
 	cancel_button.disabled = true

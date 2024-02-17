@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=3 uid="uid://dx36bm0e5eels"]
+[gd_scene load_steps=44 format=3 uid="uid://dx36bm0e5eels"]
 
 [ext_resource type="Script" path="res://Scripts/UI/BattleUIRoot.gd" id="1_enw1p"]
 [ext_resource type="PackedScene" uid="uid://dlgi7hp4dhjxn" path="res://Scenes/UI/AbilityBar.tscn" id="2_e20ti"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://duxcpuq43rxc3" path="res://Assests/Battle/UI/CancelButton/CancelButton3.png" id="4_7susy"]
 [ext_resource type="Texture2D" uid="uid://ddr0svltsh6g5" path="res://Assests/Battle/UI/CancelButton/CancelButton2.png" id="5_wdklo"]
 [ext_resource type="Texture2D" uid="uid://qcce1vpu66jl" path="res://Assests/Battle/UI/CancelButton/CancelButton4.png" id="6_t5rym"]
+[ext_resource type="AudioStream" uid="uid://ktmxckalbipn" path="res://Assests/SFX/MenuButtonCancel.wav" id="7_fb6pb"]
 [ext_resource type="Texture2D" uid="uid://bkmoonlmklutf" path="res://Assests/Battle/UI/SelectedAbility.png" id="7_xylj5"]
 [ext_resource type="Script" path="res://Scenes/SelectedAbility.gd" id="8_fkyi2"]
 [ext_resource type="Texture2D" uid="uid://cnl3pc2k2kg8t" path="res://Assests/Battle/UI/AcceptButton/AcceptButton1.png" id="9_sk032"]
@@ -175,6 +176,9 @@ texture_normal = ExtResource("3_hkk7i")
 texture_pressed = ExtResource("4_7susy")
 texture_hover = ExtResource("5_wdklo")
 texture_disabled = ExtResource("6_t5rym")
+
+[node name="SFX" type="AudioStreamPlayer" parent="MarginContainer/UIVContainer/ButtonContainer/CancelButton"]
+stream = ExtResource("7_fb6pb")
 
 [node name="Selected" type="Panel" parent="MarginContainer/UIVContainer/ButtonContainer"]
 custom_minimum_size = Vector2(87, 0)
