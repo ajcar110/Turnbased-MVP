@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Strike" load_steps=2 format=3 uid="uid://diunypqo0h4oe"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Strike.gd" id="1_k2ldi"]
+
+[resource]
+script = ExtResource("1_k2ldi")
+end_stance = "BottomLeft"
+damage = 2
+input_label = "Trip"
+name = "Trip"
+description = "Strike Bottom Left Stance"

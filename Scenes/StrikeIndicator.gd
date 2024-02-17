@@ -21,9 +21,9 @@ func update_strike_display():
 			texture.current_frame = 3
 			return
 		"BottomLeft":
-			texture.current_frame = 2
+			texture.current_frame = 4
 			return
 		"BottomRight":
-			texture.current_frame = 4
+			texture.current_frame = 2
 			return
 	clear()

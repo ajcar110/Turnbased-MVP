@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Strike" load_steps=2 format=3 uid="uid://dyubp8rb34qhs"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Strike.gd" id="1_dslyi"]
+
+[resource]
+script = ExtResource("1_dslyi")
+end_stance = "TopLeft"
+damage = 2
+input_label = "Rising Boar"
+name = "Rising Boar"
+description = "Strike Top Left Stance"

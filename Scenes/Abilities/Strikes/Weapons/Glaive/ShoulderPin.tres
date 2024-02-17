@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Strike" load_steps=2 format=3 uid="uid://ciqei1cvj4ka4"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Strike.gd" id="1_fj8dy"]
+
+[resource]
+script = ExtResource("1_fj8dy")
+end_stance = "TopRight"
+damage = 2
+input_label = "Shoulder Pin"
+name = "Shoulder Pin"
+description = "Strike Top Right Stance"

@@ -16,6 +16,8 @@ extends CanvasLayer
 #### Fight Indicator #########
 @onready var stance_indicator = $MarginContainer/FightIndicatorContainer/StanceIndicator
 @onready var strike_indicator = $MarginContainer/FightIndicatorContainer/StrikeIndicator
+@onready var stance_label = $MarginContainer/FightIndicatorContainer/MarginContainer/StanceLabel
+@onready var strike_label = $MarginContainer/FightIndicatorContainer/MarginContainer/StrikeLabel
 
 
 var ability_bar: PanelContainer

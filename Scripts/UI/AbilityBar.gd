@@ -22,42 +22,42 @@ func build_buttons(action:String):
 		"Strike":
 			match BattleData.stance:
 				"Top":
-					for a in BattleData.current_weapon.top_strikes:
+					for a in BattleData.player_weapon.top_strikes:
 						var a_butt = ability_button.instantiate()
 						ability_grid.add_child(a_butt)
 						a_butt.display(a)
 				"TopLeft":
-					for a in BattleData.current_weapon.top_left_strikes:
+					for a in BattleData.player_weapon.top_left_strikes:
 						var a_butt = ability_button.instantiate()
 						ability_grid.add_child(a_butt)
 						a_butt.display(a)
 				"TopRight":
-					for a in BattleData.current_weapon.top_right_strikes:
+					for a in BattleData.player_weapon.top_right_strikes:
 						var a_butt = ability_button.instantiate()
 						ability_grid.add_child(a_butt)
 						a_butt.display(a)
 				"Bottom":
-					for a in BattleData.current_weapon.bottom_strikes:
+					for a in BattleData.player_weapon.bottom_strikes:
 						var a_butt = ability_button.instantiate()
 						ability_grid.add_child(a_butt)
 						a_butt.display(a)
 				"BottomLeft":
-					for a in BattleData.current_weapon.bottom_left_strikes:
+					for a in BattleData.player_weapon.bottom_left_strikes:
 						var a_butt = ability_button.instantiate()
 						ability_grid.add_child(a_butt)
 						a_butt.display(a)
 				"BottomRight":
-					for a in BattleData.current_weapon.bottom_right_strikes:
+					for a in BattleData.player_weapon.bottom_right_strikes:
 						var a_butt = ability_button.instantiate()
 						ability_grid.add_child(a_butt)
 						a_butt.display(a)
 		"Block":
-					for a in BattleData.current_weapon.blocks:
+					for a in BattleData.player_weapon.blocks:
 						var a_butt = ability_button.instantiate()
 						ability_grid.add_child(a_butt)
 						a_butt.display(a)
 		"Dodge":
-					for a in BattleData.current_weapon.dodges:
+					for a in BattleData.player_weapon.dodges:
 						var a_butt = ability_button.instantiate()
 						ability_grid.add_child(a_butt)
 						a_butt.display(a)

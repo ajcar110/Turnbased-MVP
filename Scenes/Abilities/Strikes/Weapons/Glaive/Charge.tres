@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Strike" load_steps=2 format=3 uid="uid://weoqvgadv65m"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Strike.gd" id="1_hbcao"]
+
+[resource]
+script = ExtResource("1_hbcao")
+end_stance = "Top"
+damage = 2
+input_label = "Charge"
+name = "Charge"
+description = "Strike Top Stance"

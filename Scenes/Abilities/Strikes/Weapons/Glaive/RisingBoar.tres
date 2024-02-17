@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Strike" load_steps=2 format=3 uid="uid://f5rdajx2glat"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Strike.gd" id="1_jplin"]
+
+[resource]
+script = ExtResource("1_jplin")
+end_stance = "TopLeft"
+damage = 2
+input_label = "Impale"
+name = "Impale"
+description = "Strike Top Right Stance"

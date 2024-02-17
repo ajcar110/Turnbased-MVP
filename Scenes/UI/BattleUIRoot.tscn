@@ -294,6 +294,27 @@ visible = false
 layout_mode = 2
 texture = SubResource("AnimatedTexture_xs3dv")
 
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/FightIndicatorContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="StanceLabel" type="Label" parent="MarginContainer/FightIndicatorContainer/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 6
+text = "Stance:"
+
+[node name="StrikeLabel" type="Label" parent="MarginContainer/FightIndicatorContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_font_sizes/font_size = 6
+text = "Strike:"
+vertical_alignment = 2
+
 [connection signal="pressed" from="MarginContainer/UIVContainer/ButtonContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
 [connection signal="pressed" from="MarginContainer/UIVContainer/ButtonContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
 [connection signal="pressed" from="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid/Strike" to="." method="_on_strike_pressed"]

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Strike" load_steps=2 format=3 uid="uid://h0k6l7aicyhn"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Strike.gd" id="1_68y2q"]
+
+[resource]
+script = ExtResource("1_68y2q")
+end_stance = "BottomRight"
+damage = 2
+input_label = "Toe Pin"
+name = "ToePin"
+description = "Strike Bottom Right Stance"
