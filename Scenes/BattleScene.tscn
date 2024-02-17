@@ -1,9 +1,9 @@
 [gd_scene load_steps=3 format=3 uid="uid://xuf7alapsk74"]
 
 [ext_resource type="Script" path="res://Scenes/BattleScene.gd" id="1_ebmxr"]
-[ext_resource type="PackedScene" uid="uid://dgf8p0i1elr6m" path="res://Scenes/BattleUIRoot.tscn" id="3_rko63"]
+[ext_resource type="PackedScene" uid="uid://dx36bm0e5eels" path="res://Scenes/UI/BattleUIRoot.tscn" id="2_i7ory"]
 
 [node name="BattleScene" type="Node"]
 script = ExtResource("1_ebmxr")
 
-[node name="BattleUIRoot" parent="." instance=ExtResource("3_rko63")]
+[node name="BattleUIRoot" parent="." instance=ExtResource("2_i7ory")]
