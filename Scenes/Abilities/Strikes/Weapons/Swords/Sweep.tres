@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Strike" load_steps=2 format=3 uid="uid://bs8vlg70xcdwl"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Strike.gd" id="1_bgo8x"]
+
+[resource]
+script = ExtResource("1_bgo8x")
+start_stance = "Top"
+end_stance = "Bottom"
+damage = 1
+input_label = "Sweep"
+name = "Sweep"
+description = "Strike Stance"

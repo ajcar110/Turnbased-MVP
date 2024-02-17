@@ -1,0 +1,301 @@
+[gd_scene load_steps=43 format=3 uid="uid://dgf8p0i1elr6m"]
+
+[ext_resource type="Script" path="res://Scripts/BattleUIRoot.gd" id="1_ib285"]
+[ext_resource type="Texture2D" uid="uid://chbocmtd0yt42" path="res://Assests/Battle/UI/MenuBox.png" id="2_1q0ix"]
+[ext_resource type="PackedScene" uid="uid://dlgi7hp4dhjxn" path="res://Scenes/AbilityBar.tscn" id="2_44rra"]
+[ext_resource type="Texture2D" uid="uid://c1chr1ckqw7uc" path="res://Assests/Battle/UI/CancelButton1.png" id="3_4m46x"]
+[ext_resource type="Texture2D" uid="uid://36aiaoq4s0m" path="res://Assests/Battle/UI/MenuButton1.png" id="3_e0iw7"]
+[ext_resource type="Texture2D" uid="uid://duxcpuq43rxc3" path="res://Assests/Battle/UI/CancelButton3.png" id="4_g5ftx"]
+[ext_resource type="Texture2D" uid="uid://t6ismsiu5paq" path="res://Assests/Battle/UI/MenuButton2.png" id="4_omd0r"]
+[ext_resource type="Texture2D" uid="uid://ddr0svltsh6g5" path="res://Assests/Battle/UI/CancelButton2.png" id="5_2346x"]
+[ext_resource type="Texture2D" uid="uid://jb7htmchyppd" path="res://Assests/Battle/UI/MenuButton3.png" id="5_qpsoj"]
+[ext_resource type="Texture2D" uid="uid://qcce1vpu66jl" path="res://Assests/Battle/UI/CancelButton4.png" id="6_hhbwf"]
+[ext_resource type="Texture2D" uid="uid://cnl3pc2k2kg8t" path="res://Assests/Battle/UI/AcceptButton1.png" id="7_7jyma"]
+[ext_resource type="Texture2D" uid="uid://bkmoonlmklutf" path="res://Assests/Battle/UI/SelectedAbility.png" id="7_xylj5"]
+[ext_resource type="Texture2D" uid="uid://c0o05nisv1c5e" path="res://Assests/Battle/UI/AcceptButton3.png" id="8_6sg8n"]
+[ext_resource type="Script" path="res://Scenes/SelectedAbility.gd" id="8_fkyi2"]
+[ext_resource type="Texture2D" uid="uid://ddltuqfusyi1k" path="res://Assests/Battle/UI/AcceptButton2.png" id="9_8fxhd"]
+[ext_resource type="Texture2D" uid="uid://bkjc00a0r3ggi" path="res://Assests/Battle/UI/FightIndicator.png" id="16_u0860"]
+[ext_resource type="Texture2D" uid="uid://bp6dn0cig7ifq" path="res://Assests/Battle/UI/FightIndicatorStance1.png" id="17_dm4sr"]
+[ext_resource type="Texture2D" uid="uid://bwf5ly8m75ohx" path="res://Assests/Battle/UI/FightIndicatorStance2.png" id="18_0cka1"]
+[ext_resource type="Texture2D" uid="uid://dsucap4sb2r21" path="res://Assests/Battle/UI/FightIndicatorStance3.png" id="19_0i2kv"]
+[ext_resource type="Texture2D" uid="uid://crw24ich47mtm" path="res://Assests/Battle/UI/FightIndicatorStance4.png" id="20_878c0"]
+[ext_resource type="Texture2D" uid="uid://m8rtta4r0o4s" path="res://Assests/Battle/UI/FightIndicatorStance5.png" id="21_8oiws"]
+[ext_resource type="Texture2D" uid="uid://cpfbkegyqxlow" path="res://Assests/Battle/UI/FightIndicatorStance6.png" id="22_nlqm5"]
+[ext_resource type="Script" path="res://Scenes/StanceIndicator.gd" id="23_qdrnq"]
+[ext_resource type="Texture2D" uid="uid://bqunnqlwli48e" path="res://Assests/Battle/UI/FightIndicatorStrike1.png" id="23_v8tib"]
+[ext_resource type="Texture2D" uid="uid://cddoxakr1d067" path="res://Assests/Battle/UI/FightIndicatorStrike2.png" id="24_hfec5"]
+[ext_resource type="Texture2D" uid="uid://d2jbiqp2m14mx" path="res://Assests/Battle/UI/FightIndicatorStrike3.png" id="25_5d0vi"]
+[ext_resource type="Texture2D" uid="uid://186w7cpb38fe" path="res://Assests/Battle/UI/FightIndicatorStrike4.png" id="26_j8vaq"]
+[ext_resource type="Texture2D" uid="uid://co6uaqv0bgf61" path="res://Assests/Battle/UI/FightIndicatorStrike5.png" id="27_kmo0b"]
+[ext_resource type="Texture2D" uid="uid://cx1xywb6gkw6p" path="res://Assests/Battle/UI/FightIndicatorStrike6.png" id="28_71gbb"]
+[ext_resource type="Texture2D" uid="uid://cfek5p76cwni" path="res://Assests/Battle/UI/FightIndicatorBlankFrame.png" id="30_ayna5"]
+[ext_resource type="Script" path="res://Scenes/StrikeIndicator.gd" id="31_temip"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0sgvw"]
+bg_color = Color(0.945313, 0, 0.285156, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1o5xh"]
+bg_color = Color(0.94902, 0, 0.286275, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jdija"]
+texture = ExtResource("7_xylj5")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4f6e6"]
+texture = ExtResource("2_1q0ix")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_nnbuv"]
+texture = ExtResource("3_e0iw7")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sdtc1"]
+texture = ExtResource("4_omd0r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4ou8n"]
+texture = ExtResource("5_qpsoj")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_k7u6l"]
+texture = ExtResource("16_u0860")
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_aad7p"]
+frames = 6
+pause = true
+frame_0/texture = ExtResource("17_dm4sr")
+frame_1/texture = ExtResource("18_0cka1")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("19_0i2kv")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("20_878c0")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("21_8oiws")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("22_nlqm5")
+frame_5/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_vdws7"]
+frames = 7
+pause = true
+frame_0/texture = ExtResource("23_v8tib")
+frame_1/texture = ExtResource("24_hfec5")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("25_5d0vi")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("26_j8vaq")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("27_kmo0b")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("28_71gbb")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("30_ayna5")
+frame_6/duration = 1.0
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_xs3dv"]
+frames = 5
+frame_1/duration = 1.0
+frame_2/duration = 1.0
+frame_3/duration = 1.0
+frame_4/duration = 1.0
+
+[node name="BattleUIRoot" type="CanvasLayer"]
+script = ExtResource("1_ib285")
+ability_bar_scene = ExtResource("2_44rra")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 3
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="UIVContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="HPContainer" type="HBoxContainer" parent="MarginContainer/UIVContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+alignment = 1
+
+[node name="PlayerHP" type="ProgressBar" parent="MarginContainer/UIVContainer/HPContainer"]
+custom_minimum_size = Vector2(120, 16)
+layout_mode = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_0sgvw")
+max_value = 50.0
+step = 1.0
+value = 38.0
+rounded = true
+show_percentage = false
+
+[node name="PlayerNameLabel" type="Label" parent="MarginContainer/UIVContainer/HPContainer/PlayerHP"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Player"
+horizontal_alignment = 1
+
+[node name="EnemyHP" type="ProgressBar" parent="MarginContainer/UIVContainer/HPContainer"]
+custom_minimum_size = Vector2(120, 16)
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_styles/fill = SubResource("StyleBoxFlat_1o5xh")
+max_value = 50.0
+step = 1.0
+value = 50.0
+rounded = true
+fill_mode = 1
+show_percentage = false
+
+[node name="EnemyNameLabel" type="Label" parent="MarginContainer/UIVContainer/HPContainer/EnemyHP"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Enemy"
+horizontal_alignment = 1
+
+[node name="Screen" type="Control" parent="MarginContainer/UIVContainer"]
+custom_minimum_size = Vector2(0, 74)
+layout_mode = 2
+
+[node name="ButtonContainer" type="HBoxContainer" parent="MarginContainer/UIVContainer"]
+layout_mode = 2
+
+[node name="CancelButton" type="TextureButton" parent="MarginContainer/UIVContainer/ButtonContainer"]
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("3_4m46x")
+texture_pressed = ExtResource("4_g5ftx")
+texture_hover = ExtResource("5_2346x")
+texture_disabled = ExtResource("6_hhbwf")
+
+[node name="Selected" type="Panel" parent="MarginContainer/UIVContainer/ButtonContainer"]
+custom_minimum_size = Vector2(87, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_jdija")
+script = ExtResource("8_fkyi2")
+
+[node name="Text" type="Label" parent="MarginContainer/UIVContainer/ButtonContainer/Selected"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.956863, 0.956863, 0.956863, 1)
+theme_override_font_sizes/font_size = 6
+text = "Chop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AcceptButton" type="TextureButton" parent="MarginContainer/UIVContainer/ButtonContainer"]
+layout_mode = 2
+disabled = true
+texture_normal = ExtResource("7_7jyma")
+texture_pressed = ExtResource("8_6sg8n")
+texture_hover = ExtResource("9_8fxhd")
+texture_disabled = ExtResource("6_hhbwf")
+
+[node name="BarContainer" type="HBoxContainer" parent="MarginContainer/UIVContainer"]
+layout_mode = 2
+
+[node name="ActionBar" type="PanelContainer" parent="MarginContainer/UIVContainer/BarContainer"]
+custom_minimum_size = Vector2(106, 48)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_4f6e6")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/UIVContainer/BarContainer/ActionBar"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="Label" type="Label" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 7
+text = "Actions"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MainGrid" type="GridContainer" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 5
+theme_override_constants/v_separation = 5
+columns = 2
+
+[node name="Strike" type="Button" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
+custom_minimum_size = Vector2(40, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_nnbuv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sdtc1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4ou8n")
+text = "Strike"
+
+[node name="Block" type="Button" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
+custom_minimum_size = Vector2(40, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_nnbuv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sdtc1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4ou8n")
+text = "Block"
+
+[node name="Dodge" type="Button" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
+custom_minimum_size = Vector2(40, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_nnbuv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sdtc1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4ou8n")
+text = "Dodge"
+
+[node name="Bag" type="Button" parent="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid"]
+custom_minimum_size = Vector2(40, 22)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxTexture_nnbuv")
+theme_override_styles/hover = SubResource("StyleBoxTexture_sdtc1")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_4ou8n")
+text = "Bag
+"
+
+[node name="FightIndicatorContainer" type="PanelContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(80, 63)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+theme_override_styles/panel = SubResource("StyleBoxTexture_k7u6l")
+
+[node name="StanceIndicator" type="TextureRect" parent="MarginContainer/FightIndicatorContainer"]
+layout_mode = 2
+texture = SubResource("AnimatedTexture_aad7p")
+script = ExtResource("23_qdrnq")
+
+[node name="StrikeIndicator" type="TextureRect" parent="MarginContainer/FightIndicatorContainer"]
+layout_mode = 2
+texture = SubResource("AnimatedTexture_vdws7")
+script = ExtResource("31_temip")
+
+[node name="BlockIndicator" type="TextureRect" parent="MarginContainer/FightIndicatorContainer"]
+visible = false
+layout_mode = 2
+texture = SubResource("AnimatedTexture_xs3dv")
+
+[connection signal="pressed" from="MarginContainer/UIVContainer/ButtonContainer/CancelButton" to="." method="_on_cancel_button_pressed"]
+[connection signal="pressed" from="MarginContainer/UIVContainer/ButtonContainer/AcceptButton" to="." method="_on_accept_button_pressed"]
+[connection signal="pressed" from="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid/Strike" to="." method="_on_strike_pressed"]
+[connection signal="pressed" from="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid/Block" to="." method="_on_block_pressed"]
+[connection signal="pressed" from="MarginContainer/UIVContainer/BarContainer/ActionBar/VBoxContainer/MainGrid/Dodge" to="." method="_on_dodge_pressed"]

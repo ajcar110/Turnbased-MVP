@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Block" load_steps=2 format=3 uid="uid://thcq888yygml"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Block.gd" id="1_qeqb6"]
+
+[resource]
+script = ExtResource("1_qeqb6")
+face = 3
+input_label = "Right"
+name = "RightBlock"
+description = "Blocks Right Face"

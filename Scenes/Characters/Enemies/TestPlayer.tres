@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Character" load_steps=3 format=3 uid="uid://dap2gb7ls7upo"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Character.gd" id="1_o80pl"]
+[ext_resource type="Resource" uid="uid://csui3hj8r54gs" path="res://Scenes/Weapons/Sword.tres" id="2_py8uu"]
+
+[resource]
+script = ExtResource("1_o80pl")
+name = "Sir Razputin"
+max_hp = 50
+hp = 50
+weapon = ExtResource("2_py8uu")
+defense = 1

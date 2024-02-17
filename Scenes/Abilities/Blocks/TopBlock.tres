@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Block" load_steps=2 format=3 uid="uid://ch3j1vgkmgp3v"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Block.gd" id="1_guuhr"]
+
+[resource]
+script = ExtResource("1_guuhr")
+face = 0
+input_label = "Top"
+name = "TopBlock"
+description = "Blocks Top Face"

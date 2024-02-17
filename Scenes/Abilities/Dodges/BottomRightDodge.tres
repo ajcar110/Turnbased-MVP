@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dodge" load_steps=2 format=3 uid="uid://8r8louvyueaq"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Dodge.gd" id="1_gfijh"]
+
+[resource]
+script = ExtResource("1_gfijh")
+stance = 5
+input_label = "BRight"
+name = "BottomRightDodge"
+description = "Dodges Bottom Right Stance"

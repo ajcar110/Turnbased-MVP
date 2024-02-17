@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Strike" load_steps=2 format=3 uid="uid://dmjf68t2kb2js"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Strike.gd" id="1_jmj57"]
+
+[resource]
+script = ExtResource("1_jmj57")
+end_stance = "BottomLeft"
+damage = 1
+input_label = "Slash"
+name = "Slash"
+description = "Strikes Top Right Stance"

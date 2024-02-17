@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Dodge" load_steps=2 format=3 uid="uid://c5cke8l3x7e8q"]
+
+[ext_resource type="Script" path="res://Scenes/CustomResources/Dodge.gd" id="1_mfi1p"]
+
+[resource]
+script = ExtResource("1_mfi1p")
+stance = 1
+input_label = "TLeft"
+name = "TopLeftDodge"
+description = "Dodges Top Left Stance"

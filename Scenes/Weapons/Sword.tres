@@ -1,0 +1,32 @@
+[gd_resource type="Resource" script_class="Weapon" load_steps=18 format=3 uid="uid://csui3hj8r54gs"]
+
+[ext_resource type="Resource" uid="uid://ch3j1vgkmgp3v" path="res://Scenes/Abilities/Blocks/TopBlock.tres" id="1_t6ctq"]
+[ext_resource type="Resource" uid="uid://thcq888yygml" path="res://Scenes/Abilities/Blocks/RightBlock.tres" id="2_7rrat"]
+[ext_resource type="Resource" uid="uid://jv3igpl2bj81" path="res://Scenes/Abilities/Blocks/LeftBlock.tres" id="3_moncj"]
+[ext_resource type="Resource" uid="uid://dypvsu4g0ligg" path="res://Scenes/Abilities/Blocks/BottomBlock.tres" id="4_b2f8e"]
+[ext_resource type="Resource" uid="uid://c5cke8l3x7e8q" path="res://Scenes/Abilities/Dodges/TopLeftDodge.tres" id="5_gn8xj"]
+[ext_resource type="Resource" uid="uid://bs8vlg70xcdwl" path="res://Scenes/Abilities/Strikes/Weapons/Swords/Sweep.tres" id="5_tc0n3"]
+[ext_resource type="Resource" uid="uid://1a8fi8nhdkg0" path="res://Scenes/Abilities/Strikes/Weapons/Swords/Stab.tres" id="6_fyfe1"]
+[ext_resource type="Resource" uid="uid://shm11nh5j1w3" path="res://Scenes/Abilities/Dodges/TopDodge.tres" id="6_kxt8k"]
+[ext_resource type="Resource" uid="uid://c2nuj3s5jwjlo" path="res://Scenes/Abilities/Dodges/TopRightDodge.tres" id="7_7ijh1"]
+[ext_resource type="Resource" uid="uid://bqav3h31hfbfl" path="res://Scenes/Abilities/Strikes/Weapons/Swords/Slice.tres" id="7_whufx"]
+[ext_resource type="Resource" uid="uid://dsnb76uv3pt3l" path="res://Scenes/Abilities/Dodges/BottomLeftDodge.tres" id="8_65eiu"]
+[ext_resource type="Resource" uid="uid://dnc4cvdunbkod" path="res://Scenes/Abilities/Dodges/BottomDodge.tres" id="9_uxifw"]
+[ext_resource type="Resource" uid="uid://8r8louvyueaq" path="res://Scenes/Abilities/Dodges/BottomRightDodge.tres" id="10_phwmj"]
+[ext_resource type="Script" path="res://Scenes/CustomResources/Weapon.gd" id="11_nlhcy"]
+[ext_resource type="Resource" uid="uid://b6mnsq55on2xb" path="res://Scenes/Abilities/Strikes/Weapons/Swords/Swipe.tres" id="15_ubyai"]
+[ext_resource type="Resource" uid="uid://dmjf68t2kb2js" path="res://Scenes/Abilities/Strikes/Weapons/Swords/Slash.tres" id="16_v5cn1"]
+[ext_resource type="Resource" uid="uid://by4f6jdc2ak4g" path="res://Scenes/Abilities/Strikes/Weapons/Swords/Chop.tres" id="17_ghnas"]
+
+[resource]
+script = ExtResource("11_nlhcy")
+home_stance = "Top"
+home_face = "Right"
+top_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("17_ghnas")])
+top_left_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("15_ubyai")])
+top_right_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("16_v5cn1")])
+bottom_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("7_whufx")])
+bottom_left_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("5_tc0n3")])
+bottom_right_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("6_fyfe1")])
+blocks = Array[Resource("res://Scenes/CustomResources/Block.gd")]([ExtResource("1_t6ctq"), ExtResource("2_7rrat"), ExtResource("3_moncj"), ExtResource("4_b2f8e")])
+dodges = Array[Resource("res://Scenes/CustomResources/Dodge.gd")]([ExtResource("5_gn8xj"), ExtResource("6_kxt8k"), ExtResource("7_7ijh1"), ExtResource("8_65eiu"), ExtResource("9_uxifw"), ExtResource("10_phwmj")])
