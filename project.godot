@@ -17,8 +17,8 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-BattleData="*res://Scripts/BattleData.gd"
-GlobalSignals="*res://Scripts/GlobalSignals.gd"
+BattleData="*res://Scripts/Globals/BattleData.gd"
+GlobalSignals="*res://Scripts/Globals/GlobalSignals.gd"
 
 [display]
 
