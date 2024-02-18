@@ -9,6 +9,8 @@ var enemy: = preload("res://Scenes/Characters/Enemies/TestEnemy.tres") as Charac
 var player_weapon: Weapon = player.weapon
 var player_stance: String = player_weapon.home_stance
 var player_face: String = player_weapon.home_face
+var enemy_stance: String = enemy.weapon.home_stance
+var enemy_face: String = enemy.weapon.home_face
 var selected_ability: Ability
 var player_action: Ability
 var enemy_action: Ability
