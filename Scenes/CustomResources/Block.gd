@@ -1,4 +1,4 @@
 extends Ability
 class_name Block
 
-@export_enum("Top","Bottom","Left","Right") var face
+@export_enum("None","Top","Bottom","Left","Right") var face = "None"

@@ -5,7 +5,7 @@ func _ready():
 
 
 func update_stance_display():
-	match BattleData.stance:
+	match BattleData.player_stance:
 		"Top":
 			texture.current_frame = 0
 			return

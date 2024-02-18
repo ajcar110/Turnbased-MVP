@@ -20,7 +20,7 @@ func display(action:String):
 func build_buttons(action:String):
 	match action:
 		"Strike":
-			match BattleData.stance:
+			match BattleData.player_stance:
 				"Top":
 					for a in BattleData.player_weapon.top_strikes:
 						var a_butt = ability_button.instantiate()

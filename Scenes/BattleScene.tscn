@@ -7,3 +7,9 @@
 script = ExtResource("1_ebmxr")
 
 [node name="BattleUIRoot" parent="." instance=ExtResource("2_i7ory")]
+
+[node name="PlayerMarker" type="Marker2D" parent="."]
+position = Vector2(60, 61)
+
+[node name="EnemyMarker" type="Marker2D" parent="."]
+position = Vector2(262, 61)

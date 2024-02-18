@@ -8,3 +8,4 @@ class_name Character
 @export var hp: int = 25
 @export var weapon: Weapon
 @export var defense: int = 1
+@export var body: PackedScene

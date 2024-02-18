@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_hq4np")
-face = 2
+face = "Left"
 input_label = "Left"
 name = "LeftBlock"
 description = "Blocks Left Face"

@@ -18,7 +18,9 @@ extends CanvasLayer
 @onready var strike_indicator = $MarginContainer/FightIndicatorContainer/StrikeIndicator
 @onready var block_indicator = $MarginContainer/FightIndicatorContainer/BlockIndicator
 @onready var stance_label = $MarginContainer/FightIndicatorContainer/MarginContainer/StanceLabel
-@onready var block_label = $MarginContainer/FightIndicatorContainer/MarginContainer/BlockLabel
+@onready var face_label = $MarginContainer/FightIndicatorContainer/MarginContainer/FaceLabel
+
+
 
 ##### BAD BAD BAD ############
 ###############################
@@ -54,9 +56,9 @@ func update_hp_bars():
 
 func update_fight_indicator():
 	stance_indicator.update_stance_display()
-	stance_label.text ="Stance: " + BattleData.stance
+	stance_label.text ="Stance: " + BattleData.player_stance
 	block_indicator.update_block_display()
-	block_label.text = "Block: " + BattleData.face
+	face_label.text ="Face: " + BattleData.player_face
 	strike_indicator.clear()
 
 func update_strike_indicator():

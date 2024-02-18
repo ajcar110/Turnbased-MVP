@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckdlshhkqr2tj"]
+
+[ext_resource type="Texture2D" uid="uid://dyq68iheoy5xb" path="res://Assests/Battle/Sprites/SirRaz.png" id="1_5i40e"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c7qrv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_5i40e")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="CharacterBody" type="AnimatedSprite2D"]
+sprite_frames = SubResource("SpriteFrames_c7qrv")
+animation = &"Idle"

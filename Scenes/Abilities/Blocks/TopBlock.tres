@@ -4,7 +4,7 @@
 
 [resource]
 script = ExtResource("1_guuhr")
-face = 0
+face = "Top"
 input_label = "Top"
 name = "TopBlock"
 description = "Blocks Top Face"
