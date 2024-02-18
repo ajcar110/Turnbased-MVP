@@ -41,8 +41,15 @@ func end_turn():
 	GlobalSignals.EndTurn.emit()
 	BattleData.player_action = null
 	BattleData.enemy_action = null
+	BattleData.turn += 1
+	print("Round:")
+	print(BattleData.turn)
 	print("E_HP:")
 	print(BattleData.enemy.hp)
+	print("######")
+	print("P_HP:")
+	print(BattleData.enemy.hp)
+	print("******************")
 
 func strike(strike: Strike, target: Character):
 	if coverage(BattleData.enemy_stance).has(strike.end_stance):

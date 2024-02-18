@@ -6,6 +6,7 @@ var enemy: = preload("res://Scenes/Characters/Enemies/TestEnemy.tres") as Charac
 
 
 # Combat Info #########################################
+var turn: int = 0
 var player_weapon: Weapon = player.weapon
 var player_stance: String = player_weapon.home_stance
 var player_face: String = player_weapon.home_face
