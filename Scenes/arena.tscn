@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://dx6ro3lp00vmq"]
+
+[ext_resource type="Script" path="res://Scripts/Arena.gd" id="1_1rhdy"]
+[ext_resource type="Resource" uid="uid://dap2gb7ls7upo" path="res://Scenes/Characters/Enemies/TestPlayer.tres" id="2_dop0n"]
+[ext_resource type="Resource" uid="uid://b7i5grf735q35" path="res://Scenes/Characters/Enemies/TestEnemy.tres" id="3_a4jxt"]
+[ext_resource type="PackedScene" uid="uid://dtg0476fnslyl" path="res://Scenes/CustomResources/CharacterCard.tscn" id="4_qt7km"]
+[ext_resource type="Script" path="res://Scripts/UI/ArenaUI.gd" id="4_vka33"]
+
+[node name="Arena" type="Node"]
+script = ExtResource("1_1rhdy")
+combatant_1 = ExtResource("2_dop0n")
+combatant_2 = ExtResource("3_a4jxt")
+
+[node name="ArenaUI" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+script = ExtResource("4_vka33")
+character_card_scene = ExtResource("4_qt7km")
+
+[node name="MarginContainer" type="MarginContainer" parent="ArenaUI"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ArenaUI/MarginContainer"]
+layout_mode = 2
+
+[node name="CardContainer" type="HBoxContainer" parent="ArenaUI/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2

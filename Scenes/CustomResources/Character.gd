@@ -8,4 +8,6 @@ class_name Character
 @export var hp: int = 25
 @export var weapon: Weapon
 @export var defense: int = 1
-@export var body: PackedScene
+@export var portrait: Texture2D
+@export_enum("Top","TopLeft","TopRight","Bottom","BottomLeft","BottomRight") var stance = "Top"
+@export_enum("None","Top","Bottom","Left","Right") var face = "None"

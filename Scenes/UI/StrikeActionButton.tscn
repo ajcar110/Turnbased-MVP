@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://bgb6os0b153bx"]
+
+[ext_resource type="Texture2D" uid="uid://h7q1r6dm2mxj" path="res://Assests/Arena/Buttons/StrikeAction/CardStrikeAction1.png" id="1_r4yy7"]
+[ext_resource type="Texture2D" uid="uid://cawus2bceypc6" path="res://Assests/Arena/Buttons/StrikeAction/CardStrikeAction2.png" id="2_vuuyi"]
+[ext_resource type="Texture2D" uid="uid://1ll2p3fqiipp" path="res://Assests/Arena/Buttons/StrikeAction/CardStrikeAction3.png" id="3_hsio4"]
+
+[node name="TextureButton" type="TextureButton"]
+offset_right = 32.0
+offset_bottom = 32.0
+texture_normal = ExtResource("1_r4yy7")
+texture_pressed = ExtResource("2_vuuyi")
+texture_hover = ExtResource("3_hsio4")

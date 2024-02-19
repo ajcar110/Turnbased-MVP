@@ -1,0 +1,122 @@
+[gd_scene load_steps=9 format=3 uid="uid://dtg0476fnslyl"]
+
+[ext_resource type="Texture2D" uid="uid://dbnoi5twwt35r" path="res://Assests/Arena/Character Card.png" id="1_t1bqt"]
+[ext_resource type="Script" path="res://Scripts/CharacterCard.gd" id="2_wbc4a"]
+[ext_resource type="Texture2D" uid="uid://c0kv1e6oyedia" path="res://Assests/Battle/Sprites/thaseos.png" id="3_12hit"]
+[ext_resource type="Texture2D" uid="uid://doxh5d8vkq4sm" path="res://Assests/Arena/CardHPBAR.png" id="3_ojafe"]
+[ext_resource type="PackedScene" uid="uid://bgb6os0b153bx" path="res://Scenes/UI/StrikeActionButton.tscn" id="5_212gh"]
+[ext_resource type="Script" path="res://Scripts/UI/ActionGrid.gd" id="5_q7v8n"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cp7sp"]
+texture = ExtResource("1_t1bqt")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvmpf"]
+
+[node name="CharacterCard" type="PanelContainer"]
+custom_minimum_size = Vector2(128, 144)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_cp7sp")
+script = ExtResource("2_wbc4a")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 3
+theme_override_constants/margin_right = 3
+theme_override_constants/margin_bottom = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 7
+text = "Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="StatBox" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="Portrait" type="TextureRect" parent="MarginContainer/VBoxContainer/StatBox"]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("3_12hit")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/StatBox"]
+custom_minimum_size = Vector2(72, 0)
+layout_mode = 2
+theme_override_constants/separation = 3
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer/StatBox/VBoxContainer"]
+layout_mode = 2
+
+[node name="Indicator" type="PanelContainer" parent="MarginContainer/VBoxContainer/StatBox/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(42, 41)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_xvmpf")
+
+[node name="InfoContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/StatBox/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 1
+
+[node name="StanceLabel" type="Label" parent="MarginContainer/VBoxContainer/StatBox/VBoxContainer/HBoxContainer/InfoContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 3
+text = "Stance"
+
+[node name="FaceLabel" type="Label" parent="MarginContainer/VBoxContainer/StatBox/VBoxContainer/HBoxContainer/InfoContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 3
+text = "Stance"
+
+[node name="WeaponLabel" type="Label" parent="MarginContainer/VBoxContainer/StatBox/VBoxContainer/HBoxContainer/InfoContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 3
+text = "Weapon:"
+
+[node name="Damage" type="Label" parent="MarginContainer/VBoxContainer/StatBox/VBoxContainer/HBoxContainer/InfoContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 3
+text = "Damage:"
+
+[node name="HPBar" type="TextureProgressBar" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+value = 50.0
+texture_progress = ExtResource("3_ojafe")
+
+[node name="ActionGrid" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+columns = 2
+script = ExtResource("5_q7v8n")
+
+[node name="TextureButton" parent="MarginContainer/VBoxContainer/ActionGrid" instance=ExtResource("5_212gh")]
+layout_mode = 2
+
+[node name="TextureButton2" parent="MarginContainer/VBoxContainer/ActionGrid" instance=ExtResource("5_212gh")]
+layout_mode = 2
+
+[node name="TextureButton3" parent="MarginContainer/VBoxContainer/ActionGrid" instance=ExtResource("5_212gh")]
+layout_mode = 2
+
+[node name="TextureButton4" parent="MarginContainer/VBoxContainer/ActionGrid" instance=ExtResource("5_212gh")]
+layout_mode = 2
+
+[node name="AbilityGrid" type="GridContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2

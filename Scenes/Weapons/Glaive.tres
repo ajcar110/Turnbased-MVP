@@ -20,6 +20,7 @@
 script = ExtResource("1_3um0i")
 home_stance = "TopLeft"
 home_face = "Right"
+name = "Glaive"
 top_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("5_456ni"), ExtResource("11_catpm")])
 top_left_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("3_q3jq3")])
 top_right_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("4_c0dbl"), ExtResource("9_wtem0")])

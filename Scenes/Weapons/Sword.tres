@@ -22,6 +22,7 @@
 script = ExtResource("11_nlhcy")
 home_stance = "Top"
 home_face = "Right"
+name = "Sword"
 top_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("17_ghnas")])
 top_left_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("15_ubyai")])
 top_right_strikes = Array[Resource("res://Scenes/CustomResources/Strike.gd")]([ExtResource("16_v5cn1")])

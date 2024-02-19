@@ -4,6 +4,7 @@ class_name Weapon
 @export_category("Weapon Info")
 @export_enum("Top","TopLeft","TopRight","Bottom","BottomLeft","BottomRight") var home_stance ="Top"
 @export_enum("Top","Left","Right","Bottom") var home_face ="Right"
+@export var name: String
 
 @export_category("Strikes")
 @export var top_strikes: Array[Strike] = []
